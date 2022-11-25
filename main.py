@@ -2,10 +2,11 @@ import uvicorn
 from fastapi import FastAPI
 
 from db.base import database
-from endpionts import users
+from endpionts import users, auth
 
 app = FastAPI(title='Cash App')
 app.include_router(users.router, prefix='/users', tags=['users'])
+app.include_router(auth.router, prefix='/auth', tags=['auth'])
 
 
 @app.get('/')

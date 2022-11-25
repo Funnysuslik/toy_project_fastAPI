@@ -1,7 +1,8 @@
-version: '3'
+version: '3.8'
+
 services:
   db:
-    image: postgres:11
+    image: postgres:13.0-alpine
     ports:
       - 32700:5432
     volumes:
